@@ -6,37 +6,170 @@
     <title>HTML Tutorials</title>
 
     <style>
-        body {
-            font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 20px 40px;
-            background-color: #E3EBFD;
-            color: #086ac7;
-        }
-        h1,h2 {
-            color:  #2A505A;
-        }
-        ul {
-            list-style-type: square ;
-        }
-        a {
-            text-decoration: none;
-            color: #293242 ;
-        }
-        a:hover {
-            text-decoration: underline;
-            color: #7F867B ;
-        }
-        pre{
-            background-color: rgb(232, 242, 242);
-            border-left: 4px solid rgb(164, 200, 232);
-            white-space: pre-wrap;
-            box-shadow: 4px 5px 15px rgba(0,0,0,0.3)
-        }
-        p{
-            color: rgb(17, 17, 17);
-        }
-        
+        /* reset */
+* {
+    box-sizing: border-box;
+}
+
+/* body */
+body {
+    margin: 0;
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #0B0F14;
+    color: #E5E7EB;
+    line-height: 1.7;
+    padding: 60px 0;
+}
+
+/* layout */
+body > * {
+    width: 65%;
+    margin: auto;
+}
+
+/* headings */
+h1 {
+    text-align: center;
+    color: #22C55E;
+    letter-spacing: 0.6px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #86EFAC;
+    margin-top: 40px;
+}
+
+/* paragraph */
+p {
+    color: #D1D5DB;
+}
+
+/* card effect ให้ทุก section */
+h2,
+p,
+ul,
+pre {
+    background: #151A21;
+    padding: 22px 26px;
+    border-radius: 18px;
+    margin-bottom: 28px;
+    border: 1px solid #1F2937;
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.6),
+        inset 0 1px 0 rgba(255,255,255,0.03);
+}
+
+/* list */
+ul {
+    list-style: square;
+}
+
+ul li {
+    margin-bottom: 8px;
+    color: #CBD5E1;
+}
+
+/* code block */
+pre {
+    background: #0F172A;
+    border-left: 4px solid #22C55E;
+    white-space: pre-wrap;
+    overflow-x: auto;
+}
+
+/* inline code */
+code {
+    background: #020617;
+    color: #22C55E;
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+/* formatting tags */
+b, strong {
+    color: #ECFDF5;
+}
+
+i, em {
+    color: #A7F3D0;
+}
+
+u, ins {
+    color: #FB7185;
+}
+
+mark {
+    background: rgba(34,197,94,0.18);
+    color: #ECFDF5;
+    padding: 2px 6px;
+    border-radius: 6px;
+}
+
+small {
+    color: #9CA3AF;
+}
+
+del, s {
+    color: #6B7280;
+}
+
+sub, sup {
+    color: #86EFAC;
+}
+
+/* link */
+a {
+    display: inline-block;
+    margin-top: 16px;
+    color: #22C55E;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 10px;
+    border: 1px solid #22C55E;
+    transition: 0.25s;
+
+}
+
+a:hover {
+    background: #22C55E;
+    color: #0B0F14;
+}
+
+/* hr */
+hr {
+    border: none;
+    height: 1px;
+    background: #1F2937;
+    margin: 50px 0;
+}
+.top-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    padding: 6px 14px;
+    margin-top: 10px;
+
+    color: #22C55E;
+    background: rgba(34,197,94,0.08);
+
+    border-radius: 999px;
+    border: 1px solid rgba(34,197,94,0.25);
+
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.top-btn:hover {
+    background: #22C55E;
+    color: #0B0F14;
+    transform: translateY(-2px);
+}
     </style>
     
 </head>
@@ -57,6 +190,8 @@
         <li><a href="#html forms">HTML Forms</a></li>
         <li><a href="">Embedding Multimedia (Audio & Video)</a></li>
         <li><a href="#semantic">Semantic HTML</a></li>
+        <li><a href="#workshop">Workshop</a></li>
+
     </ul>
     <hr>
     <!-- Section 1 -->
@@ -97,10 +232,10 @@
 <hr>
 
     <h2 id="heading">Heading</h2>
-    <p>workshop</p>
+
+    <p><a href="heading.html">workshop</a></p>
     <p>HTML headings are defined with the &lt;h1&gt; to &lt;h6&gt; tags...&lt;/p>
     <pre>
-
     - &lt;h1&gt;: Heading 1
     - &lt;h2&gt;: Heading 2
     - &lt;h3&gt;: Heading 3
@@ -120,7 +255,7 @@
     <a href="#">TOP</a>
     <hr>
     <h2 id="formatting">Text Formatting</h2>
-    <p>workshop</p>
+    <p><a href="formatting.html">workshop</a></p>
     <p>HTML provides various elements to format text...</p>
     <pre>
     - &lt;h1&gt; to &lt;h6&gt;: Headings
@@ -219,7 +354,7 @@
      <a href="#">TOP</a>
      <hr>
      <h2 id="adding imges">Adding Images</h2>
-     <a href="">workshop</a>
+     <p>workshop</p>
     <p>HTML images are defined with the &lt;img&gt; tag...</p>
     <pre>
         - &lt;img src="url" alt="description"&gt;
