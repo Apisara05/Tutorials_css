@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Workshop</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        /* Container */
+        .container {
+            width: 65%;
+            margin: 60px auto;
+        }
+
+        /* Body */
+        body {
+            background-color: #000000;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        /* Headings */
+        h1 {
+            text-align: center;
+            color: #22C55E;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+       h2 {
+            text-align: left;  /* ชิดซ้าย */
+            color: #86EFAC;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+}
+
+        h3 {
+            color: #ffffff;
+        }
+
+        /* Paragraphs */
+        p {
+            text-align: left;
+            color: #ffffff;
+        }
+
+        /* Pre & Code */
+        pre {
+            background: #0F172A;
+            color: #ffffff;
+            padding: 12px;
+            border-radius: 10px;
+            overflow-x: auto;
+        }
+        code {
+            color: hsl(76, 83%, 51%);
+            font-family: 'Courier New', Courier, monospace;
+            background: #16A34A;
+        }
+ 
+        /* Links */
+        a {
+             text-align: left;
+            text-decoration: none; /* เอาเส้นใต้ */
+            color: rgb(8, 255, 218);
+            text-align: left;
+        }
+        a:hover {
+            color: #22C55E;
+        }
+
+        /* Cards */
+        .card1, .card2, .card3 ,.card4,.card5,.card6{
+            text-align: left;
+            background: #151A21;
+            border-radius: 18px;
+            padding: 24px;
+            margin-bottom: 28px;
+            border: 1px solid #1F2937;
+            border-top-color: #aaff00;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.03);
+            transition: 0.3s ease;
+        }
+         .card1.bordercolor-1 {
+            border-top: 4px solid #22C55E; /* เขียว */
+        }
+        .card2.bordercolor-2 {
+            border-top: 4px solid #38BDF8; /* ฟ้า */
+        }
+        .card3.bordercolor-3 {
+            border-top: 4px solid #A855F7; /* ม่วง */
+        }
+        .card4.bordercolor-4 {
+            border-top: 4px solid #FACC15; /* เหลือง */
+        }
+        .card5.bordercolor-5 {
+            border-top: 4px solid #FB7185; /* ชมพูแดง */
+        }
+        .card6.bordercolor-6 {
+            border-top: 4px solid #34D399; /* เขียวอมฟ้า */
+        }
+        .card2.border-shadow {
+            border: 1px solid #fdfdfd;
+            box-shadow:  2px 2px 5px;
+        }
+        /* Subtitle */
+        .subtitle {
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Boxes */
+        .box {
+            background: #0F172A;
+            border-left: 4px solid #22C55E;
+            padding: 14px 18px;
+            border-radius: 10px;
+            margin-top: 16px;
+        }
+
+        /* External Links */
+        .link-ext a {
+            display: inline-block;
+            margin-bottom: 6px;
+        }
+        /* Buttons Glow Effect */
+button ,footer{
+    background-color: #22C55E;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    margin: 6px 0;
+    border-radius: 6px;
+    cursor: pointer;
+
+    /* Glow */
+    box-shadow: 0 0 5px #22C55E, 0 0 10px #22C55E, 0 0 20px #22C55E, 0 0 30px #22C55E;
+    transition: 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover,footer {
+    background-color: #16A34A;
+    box-shadow: 0 0 10px #22C55E, 0 0 20px #22C55E, 0 0 30px #22C55E, 0 0 40px #22C55E;
+}
+
+/* Button Link Glow Effect */
+.btn-link ,footer{
+    text-align: center;
+    display: inline-block;
+    background-color: #22C55E;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-bottom: 6px;
+
+    /* Glow */
+    box-shadow: 0 0 5px #22C55E, 0 0 10px #22C55E, 0 0 20px #22C55E, 0 0 30px #22C55E;
+    transition: 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-link:hover {
+    background-color: #16A34A;
+    box-shadow: 0 0 10px #22C55E, 0 0 20px #22C55E, 0 0 30px #22C55E, 0 0 40px #22C55E;
+}
+.note {
+    margin-top: 16px;
+    padding: 12px 16px;
+    background: rgba(34, 197, 94, 0.08);
+    border-left: 4px solid #22C55E;
+    border-radius: 8px;
+    color: #86EFAC;
+    font-size: 14px;
+}
+.video-thumb {
+    display: block;
+    border-radius: 12px;
+    cursor: pointer;
+
+    /* เงาเบา ๆ */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+
+    /* Smooth hover */
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.video-thumb:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.8);
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Workshop: Various Links</h1>
+        <p class="subtitle">เรียนรู้ลิงก์หลายรูปแบบ พร้อมตัวอย่างและแบบฝึกหัด</p>
+
+        <!-- Card 1: External Links -->
+        <div class="card1 bordercolor-1">
+            <h2>1. External Links</h2>
+            <div class="card2 border-shadow link-ext">
+                <a href="https://www.wikipedia.org/" target="_blank" ><b>Visit Wikipedia</b></a>
+                <p><code>target="_blank"</code> เปิดลิงค์แท็บใหม่</p>
+            </div>
+
+            <div class="card2 border-shadow">
+                <a href="https://www.google.com/" class="link-ext" target="_self"><b>Visit Google</b></a>
+                <p><code>target="_self"</code> เปิดลิงค์ในหน้าเดิม</p>
+            </div>
+        </div>
+
+        <!-- Card 2: Internal & Anchor Links -->
+        <div class="card2 bordercolor-2 ">
+            <h2>2. Internal Links & Anchor Links</h2>
+            <pre>
+&lt;a href="about.html"&gt;About Us&lt;/a&gt;
+&lt;a href="#jump"&gt;Jump to Section&lt;/a&gt;
+&lt;h3 id="jump"&gt;This is the jump target&lt;/h3&gt;
+            </pre>
+            <a href="#jump"><u>Click to Jump</u></a>
+            <h3 id="jump">This is The jump target.</h3>
+        </div>
+
+        <!-- Card 3: Email Link -->
+        <div class="card3 bordercolor-3">
+            <h2>3. Email link</h2>
+            <pre>
+        &lt;a href="mailto:student@example.com?subject=hello"&gt;
+            send an email
+        &lt;/a&gt;
+            </pre>
+            <a href="mailto:student@example.com?subject=hello"><u>send an email</u></a>
+        </div>
+        <!-- card4 -->
+        <div class="card4 bordercolor-4">
+            <h2>4.Downlode Links</h2>
+            <pre>&lt;a href="files/sample.txt" download&gt;Download File&lt;/a&gt;</pre>
+            <a href="">Download Text File</a>
+            <p>ต้องมีไฟล์ในโฟเดอร์จึงดาวน์โหลดได้จริง</p>
+        </div>
+        <div class="card5 bordercolor-5">
+             <h2> 5. Button Links</h2>
+            <p>ลิงก์ที่ออกแบบให้คล้ายปุ่ม เหมาะกับปุ่มสมัคร ปุ่มอ่านเพิ่มเติม หรือปุ่มนำทาง</p>
+            <pre>
+    &lt;a href="https://www.example.com" class="btn-link"&gt;
+    Visit Website
+    &lt;/a&gt;
+            </pre>
+
+            <button>Visit Website</button>
+            <p>สร้างปุ่มด้วยแท็ก<code> button</code></p>
+            <pre>
+    &lt;button onclick="document.location='index.html'"&gt;HTML Tutorial&lt;/button&gt;
+    - มักใช้เมื่อลิงก์ไป หน้าในเว็บเดียวกัน
+    - ผูกกับ DOM (document) โดยตรง
+    &lt;button onclick="location.href='https://www.example.com'"&gt;Visit Website&lt;/button&gt;
+    - นิยมใช้มากกว่า
+    - เหมาะทั้งลิงก์ ภายในและภายนอกเว็บ
+    - ผูกกับ window โดยตรง
+            </pre>
+
+            <button>HTML Tutorail</button>
+            <button>Visit Website</button>
+        </div>
+        <div class="card6 bordercolor-6">
+    <h2>6. Video Link</h2>
+    <p>คลิกที่วิดีโอเพื่อเปิดลิงก์</p>
+
+    <pre>
+&lt;a href="https://youtube.com"&gt;
+    &lt;video width="250" autoplay muted loop&gt;
+        &lt;source src="videos/sample.mp4" type="video/mp4"&gt;
+    &lt;/video&gt;
+&lt;/a&gt;
+    </pre>
+<a href="https://www.youtube.com/?app=desktop&hl=th&gl=TH" target="_blank">
+    <img 
+        src="https://www.appdisqus.com/wp-content/uploads/2016/12/youtube-logo.jpg"
+        alt="YouTube"
+        width="250"
+        class="video-thumb"
+    >
+</a>
+
+           "></a>
+
+    <p class="note">
+        💡หากใช้วิดีโอของตนเอง ให้นำไฟล์ไว้ในโฟลเดอร์ เช่น
+        <code>videos/myvideo.mp4</code>
+    </p>
+</div>
+    <footer> <a href="index.html">← Back to HTML Tutorial</a> </footer>
+    </div>
+</body>
+</html>
