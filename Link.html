@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Link Workshop</title>
     <style>
-        *{
+        * {
             box-sizing: border-box;
         }
+
         /* Container */
         .container {
             width: 65%;
@@ -27,12 +29,14 @@
             margin-bottom: 10px;
             letter-spacing: 0.5px;
         }
-       h2 {
-            text-align: left;  /* ชิดซ้าย */
+
+        h2 {
+            text-align: left;
+            /* ชิดซ้าย */
             color: #86EFAC;
             margin-bottom: 10px;
             letter-spacing: 0.5px;
-}
+        }
 
         h3 {
             color: #ffffff;
@@ -52,25 +56,33 @@
             border-radius: 10px;
             overflow-x: auto;
         }
+
         code {
             color: hsl(76, 83%, 51%);
             font-family: 'Courier New', Courier, monospace;
             background: #16A34A;
         }
- 
+
         /* Links */
         a {
-             text-align: left;
-            text-decoration: none; /* เอาเส้นใต้ */
+            text-align: left;
+            text-decoration: none;
+            /* เอาเส้นใต้ */
             color: rgb(8, 255, 218);
             text-align: left;
         }
+
         a:hover {
             color: #22C55E;
         }
 
         /* Cards */
-        .card1, .card2, .card3 ,.card4,.card5,.card6{
+        .card1,
+        .card2,
+        .card3,
+        .card4,
+        .card5,
+        .card6 {
             text-align: left;
             background: #151A21;
             border-radius: 18px;
@@ -78,31 +90,45 @@
             margin-bottom: 28px;
             border: 1px solid #1F2937;
             border-top-color: #aaff00;
-            box-shadow: 0 12px 30px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.03);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.03);
             transition: 0.3s ease;
         }
-         .card1.bordercolor-1 {
-            border-top: 4px solid #22C55E; /* เขียว */
+
+        .card1.bordercolor-1 {
+            border-top: 4px solid #22C55E;
+            /* เขียว */
         }
+
         .card2.bordercolor-2 {
-            border-top: 4px solid #38BDF8; /* ฟ้า */
+            border-top: 4px solid #38BDF8;
+            /* ฟ้า */
         }
+
         .card3.bordercolor-3 {
-            border-top: 4px solid #A855F7; /* ม่วง */
+            border-top: 4px solid #A855F7;
+            /* ม่วง */
         }
+
         .card4.bordercolor-4 {
-            border-top: 4px solid #FACC15; /* เหลือง */
+            border-top: 4px solid #FACC15;
+            /* เหลือง */
         }
+
         .card5.bordercolor-5 {
-            border-top: 4px solid #FB7185; /* ชมพูแดง */
+            border-top: 4px solid #FB7185;
+            /* ชมพูแดง */
         }
+
         .card6.bordercolor-6 {
-            border-top: 4px solid #34D399; /* เขียวอมฟ้า */
+            border-top: 4px solid #34D399;
+            /* เขียวอมฟ้า */
         }
+
         .card2.border-shadow {
             border: 1px solid #fdfdfd;
-            box-shadow:  2px 2px 5px;
+            box-shadow: 2px 2px 5px;
         }
+
         /* Subtitle */
         .subtitle {
             color: #ffffff;
@@ -124,73 +150,154 @@
             display: inline-block;
             margin-bottom: 6px;
         }
+
         /* Buttons Glow Effect */
-button ,footer{
-    background-color: #22C55E;
-    color: #000;
-    border: none;
-    padding: 10px 20px;
-    margin: 6px 0;
-    border-radius: 6px;
-    cursor: pointer;
+        button,
+        footer {
+            background-color: #22C55E;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            margin: 6px 0;
+            border-radius: 6px;
+            cursor: pointer;
 
-    /* Glow */
-    box-shadow: 0 0 5px #22C55E, 0 0 10px #22C55E, 0 0 20px #22C55E, 0 0 30px #22C55E;
-    transition: 0.3s ease, box-shadow 0.3s ease;
-}
+            /* Glow */
+            box-shadow: 0 0 5px #22C55E, 0 0 10px #22C55E, 0 0 20px #22C55E, 0 0 30px #22C55E;
+            transition: 0.3s ease, box-shadow 0.3s ease;
+        }
 
-button:hover,footer {
-    background-color: #16A34A;
-    box-shadow: 0 0 10px #22C55E, 0 0 20px #22C55E, 0 0 30px #22C55E, 0 0 40px #22C55E;
-}
+        button:hover,
+        footer {
+            background-color: #16A34A;
+            box-shadow: 0 0 10px #22C55E, 0 0 20px #22C55E, 0 0 30px #22C55E, 0 0 40px #22C55E;
+        }
 
-/* Button Link Glow Effect */
-.btn-link ,footer{
-    text-align: center;
-    display: inline-block;
-    background-color: #22C55E;
-    color: #000;
-    padding: 10px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    margin-bottom: 6px;
+        /* Button Link Glow Effect */
+        .btn-link,
+        footer {
+            text-align: center;
+            display: inline-block;
+            background-color: #22C55E;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            margin-bottom: 6px;
 
-    /* Glow */
-    box-shadow: 0 0 5px #22C55E, 0 0 10px #22C55E, 0 0 20px #22C55E, 0 0 30px #22C55E;
-    transition: 0.3s ease, box-shadow 0.3s ease;
-}
+            /* Glow */
+            box-shadow: 0 0 5px #22C55E, 0 0 10px #22C55E, 0 0 20px #22C55E, 0 0 30px #22C55E;
+            transition: 0.3s ease, box-shadow 0.3s ease;
+        }
 
-.btn-link:hover {
-    background-color: #16A34A;
-    box-shadow: 0 0 10px #22C55E, 0 0 20px #22C55E, 0 0 30px #22C55E, 0 0 40px #22C55E;
-}
-.note {
-    margin-top: 16px;
-    padding: 12px 16px;
-    background: rgba(34, 197, 94, 0.08);
-    border-left: 4px solid #22C55E;
-    border-radius: 8px;
-    color: #86EFAC;
-    font-size: 14px;
-}
-.video-thumb {
-    display: block;
-    border-radius: 12px;
-    cursor: pointer;
+        .btn-link:hover {
+            background-color: #16A34A;
+            box-shadow: 0 0 10px #22C55E, 0 0 20px #22C55E, 0 0 30px #22C55E, 0 0 40px #22C55E;
+        }
 
-    /* เงาเบา ๆ */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+        .note {
+            margin-top: 16px;
+            padding: 12px 16px;
+            background: rgba(34, 197, 94, 0.08);
+            border-left: 4px solid #22C55E;
+            border-radius: 8px;
+            color: #86EFAC;
+            font-size: 14px;
+        }
 
-    /* Smooth hover */
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
+        .video-thumb {
+            display: block;
+            border-radius: 12px;
+            cursor: pointer;
 
-.video-thumb:hover {
-    transform: scale(1.03);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.8);
-}
+            /* เงาเบา ๆ */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+
+            /* Smooth hover */
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .video-thumb:hover {
+            transform: scale(1.03);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.8);
+        }
+
+        .main-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .main-container .card {
+
+            padding: 20px;
+            text-align: center;
+        }
+
+        .btn-gold-border {
+            background: white !important;
+            color: black !important;
+            border: 2px solid gold !important;
+        }
+
+        .btn-hover-animation:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-shimmer {
+            background: black !important;
+            color: #22C55E !important;
+            border: 2px solid gold !important;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-shimmer::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -150%;
+            width: 50%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(30deg);
+            transition: 0.6s;
+        }
+
+        .btn-shimmer:hover::after {
+            left: 150%;
+        }
+
+        .button14 {
+            width: 160px;
+            height: 60px;
+            color: #3df500;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            background-color: #0c0c0c;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+            transition: all 0.3s ease 0s;
+        }
+
+        .button14:hover {
+            background-color: #3838ff;
+            color: #fff;
+            transform: translateY(-7px);
+        }
+
+        .button14:active {
+            transform: translateY(-1px);
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>Workshop: Various Links</h1>
@@ -200,7 +307,7 @@ button:hover,footer {
         <div class="card1 bordercolor-1">
             <h2>1. External Links</h2>
             <div class="card2 border-shadow link-ext">
-                <a href="https://www.wikipedia.org/" target="_blank" ><b>Visit Wikipedia</b></a>
+                <a href="https://www.wikipedia.org/" target="_blank"><b>Visit Wikipedia</b></a>
                 <p><code>target="_blank"</code> เปิดลิงค์แท็บใหม่</p>
             </div>
 
@@ -240,7 +347,7 @@ button:hover,footer {
             <p>ต้องมีไฟล์ในโฟเดอร์จึงดาวน์โหลดได้จริง</p>
         </div>
         <div class="card5 bordercolor-5">
-             <h2> 5. Button Links</h2>
+            <h2> 5. Button Links</h2>
             <p>ลิงก์ที่ออกแบบให้คล้ายปุ่ม เหมาะกับปุ่มสมัคร ปุ่มอ่านเพิ่มเติม หรือปุ่มนำทาง</p>
             <pre>
     &lt;a href="https://www.example.com" class="btn-link"&gt;
@@ -264,33 +371,50 @@ button:hover,footer {
             <button>Visit Website</button>
         </div>
         <div class="card6 bordercolor-6">
-    <h2>6. Video Link</h2>
-    <p>คลิกที่วิดีโอเพื่อเปิดลิงก์</p>
+            <h2>6. Video Link</h2>
+            <p>คลิกที่วิดีโอเพื่อเปิดลิงก์</p>
 
-    <pre>
+            <pre>
 &lt;a href="https://youtube.com"&gt;
     &lt;video width="250" autoplay muted loop&gt;
         &lt;source src="videos/sample.mp4" type="video/mp4"&gt;
     &lt;/video&gt;
 &lt;/a&gt;
     </pre>
-<a href="https://www.youtube.com/?app=desktop&hl=th&gl=TH" target="_blank">
-    <img 
-        src="https://www.appdisqus.com/wp-content/uploads/2016/12/youtube-logo.jpg"
-        alt="YouTube"
-        width="250"
-        class="video-thumb"
-    >
-</a>
+            <a href="https://www.youtube.com/?app=desktop&hl=th&gl=TH" target="_blank">
+                <img src="https://www.appdisqus.com/wp-content/uploads/2016/12/youtube-logo.jpg" alt="YouTube"
+                    width="250" class="video-thumb">
+            </a>
 
-           "></a>
+            "></a>
 
-    <p class="note">
-        💡หากใช้วิดีโอของตนเอง ให้นำไฟล์ไว้ในโฟลเดอร์ เช่น
-        <code>videos/myvideo.mp4</code>
-    </p>
-</div>
-    <footer> <a href="index.html">← Back to HTML Tutorial</a> </footer>
-    </div>
+            <p class="note">
+                💡หากใช้วิดีโอของตนเอง ให้นำไฟล์ไว้ในโฟลเดอร์ เช่น
+                <code>videos/myvideo.mp4</code>
+            </p>
+            <div class="main-container">
+                <div class="card">
+                    <button onclick="document.location='index.html'">HTML Tutorial</button>
+                </div>
+                <div class="card">
+                    <button onclick="location.href='https://www.google.com'">Visit Website</button>
+                </div>
+                <div class="card">
+                    <button>SUBSCRIBE</button>
+                </div>
+                <div class="card">
+                    <button class="btn-gold-border">SUBSCRIBE</button>
+                </div>
+                <div class="card">
+                    <button class="btn-hover-animation">SUBSCRIBE</button>
+                </div>
+                <div class="card">
+                    <button class="btn-shimmer">SUBSCRIBE</button>
+                </div>
+            </div>
+
+            <footer> <a href="index.html">← Back to HTML Tutorial</a> </footer>
+        </div>
 </body>
+
 </html>
