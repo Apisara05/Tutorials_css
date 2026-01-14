@@ -1,0 +1,256 @@
+/* Global Style */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* เลื่อนแล้ว จะsmooth */
+  scroll-behavior: smooth;
+  scroll-padding-top: 200px;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  line-height: 1.6;
+  background-color: rgb(0, 0, 0);
+}
+
+/*  Component Styles */
+.container {
+  max-width: 1200px;
+  /* บน ซ้าย ขวา ล่าง */
+  margin: 200px auto 40px;
+  padding: 20px;
+}
+
+.badge {
+  color: hsl(76, 83%, 51%);
+  background: #16a34a;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 8px;
+
+  vertical-align: middle;
+}
+
+.card {
+  text-align: left;
+  background: #151a21;
+  border-radius: 18px;
+  padding: 24px;
+  margin-bottom: 28px;
+  border: 1px solid #1f2937;
+  border-top-color: #aaff00;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  transition: 0.3s ease;
+}
+
+.card.module-1 {
+  border-top: 4px solid #22c55e;
+  /* เขียว */
+}
+
+.card.module-2 {
+  border-top: 4px solid #38bdf8;
+  /* ฟ้า */
+}
+
+.card.module-3 {
+  border-top: 4px solid #a855f7;
+  /* ม่วง */
+}
+
+.card.module-4 {
+  border-top: 4px solid #facc15;
+  /* เหลือง */
+}
+
+.card.module-5 {
+  border-top: 4px solid #fb7185;
+  /* ชมพูแดง */
+}
+
+.card.module-6 {
+  border-top: 4px solid #34d399;
+  /* เขียวอมฟ้า */
+}
+.card.module-7 {
+  border-top: 4px solid #fd2a8c;
+  /* เขียวอมฟ้า */
+}
+.card.module-8 {
+  border-top: 4px solid #34d399;
+  /* เขียวอมฟ้า */
+}
+
+.note {
+  margin-top: 16px;
+  padding: 12px 16px;
+  background: rgba(34, 197, 94, 0.08);
+  border-left: 4px solid #22c55e;
+  border-radius: 8px;
+  color: #86efac;
+  font-size: 14px;
+}
+
+.note::before {
+  content: none;
+}
+
+/*Group 1 Styles  */
+.header {
+  background-color: rgb(32, 31, 31);
+  box-shadow: 5px 5px 15px hsl(0, 0%, 100%);
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  /* อยู่ตรงแค่ใน class นี้ */
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  /* บอกตำแหน่งของบาร์ด้านบนสุด */
+  top: 0;
+  width: 100%;
+}
+
+.btn-text-link {
+  /* เอา จุด li ออก */
+  list-style: none;
+  margin-top: 20px;
+
+  color: #22c55e;
+
+  /* เอาไว้จัดเป็นเเนวนอน */
+  display: flex;
+
+  /* เว้นระยะห่างระหว่างตัวอักษร */
+  gap: 20px;
+}
+
+/* สร้างกล่อง li ให้มีสี */
+.btn-text-link li {
+  background-color: #16a34a;
+  /* ทำให้กรอบบวมขึ้น */
+  padding: 13px 20px;
+  /* ทำให้เป็นวงกลม */
+  border-radius: 35px;
+}
+
+.btn-text-link li:hover {
+  background-color: #22c55e;
+  /* ชี้แล้วจะเป็นรูปมือ */
+  cursor: pointer;
+}
+h1 {
+  text-align: center;
+  color: #22c55e;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+h2 {
+  color: #16a34a;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+  font-family: "Times New Roman", Times, serif;
+}
+h3 {
+  color: #33e373;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+p {
+  text-align: left;
+  color: #ffffff;
+}
+
+pre {
+  background: #0f172a;
+  color: #ffffff;
+  padding: 12px;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+footer {
+  text-align: center;
+  display: inline-block;
+  background-color: #22c55e;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-bottom: 6px;
+
+  /* Glow */
+  box-shadow: 0 0 5px #22c55e, 0 0 10px #22c55e, 0 0 20px #22c55e,
+    0 0 30px #22c55e;
+  transition: 0.3s ease, box-shadow 0.3s ease;
+}
+
+a {
+  text-align: left;
+  text-decoration: none;
+  /* เอาเส้นใต้ */
+  color: rgb(8, 255, 218);
+  text-align: left;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.gallery img {
+  height: 120px;
+  object-fit: cover;
+}
+.yt-img {
+  width: 160px;
+  margin-top: 12px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.yt-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+/*Group 2 Styles  */
+.image-small {
+  width: 100px;
+  height: auto;
+}
+
+.position {
+  display: flex;
+  border: 2px dashed gray;
+  margin: 20px 0;
+}
+.position.left {
+  justify-content: flex-start;
+}
+.position.center {
+  justify-content: center;
+}
+.position.right {
+  justify-content: flex-end;
+}
+
+/*Group 3 Styles  */
+/*Group 4 Styles  */
+/*Group 5 Styles  */
+/*Group 6 Styles  */
+/*Group 7 Styles  */
+/*Group 8 Styles  */
+/*Group 9 Styles  */
+/*Group 10 Styles  */
